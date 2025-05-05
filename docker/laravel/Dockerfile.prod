@@ -26,7 +26,9 @@ RUN rm -rf /var/www/html
 
 COPY --from=builder /var/www/laravel .
 
-RUN chown -R www-data:www-data  /var/www
+# RUN chown -R www-data:www-data  /var/www
+RUN chown -R www-data:www-data storage bootstrap/cache
+
 RUN ln -s public html
 
 EXPOSE 9000
