@@ -1,1 +1,3 @@
 desafio-go/
+docker/mysql
+*node_modules
